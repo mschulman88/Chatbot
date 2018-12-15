@@ -78,10 +78,10 @@ def chat():
         joke = tell_a_joke()
         return json.dumps({"animation": "laughing", "msg": joke})
 
-    # CHECK FOR QUESTION FROM USER
-    if "?" in user_msg:
-        response = handle_question()
-        return response
+    # CHECK FOR QUESTION FROM USER ----- BUGGED
+    # if "?" in user_msg:
+    #     response = handle_question()
+    #     return response
 
     # CHECK FOR MUSIC REQUEST IN USER INPUT
     if any((word in words_music for word in user_msg_list)):
